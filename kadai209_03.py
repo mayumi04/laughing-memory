@@ -1,7 +1,7 @@
 import csv
 
 '''
-with open('text.csv', 'w', encoding = 'utf_8') as f:
+with open('text.csv', 'w', newline ='' encoding = 'utf_8') as f:
     fieldnames = ['プログラム言語', '種類', '用途']
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
