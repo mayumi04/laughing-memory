@@ -6,6 +6,7 @@ with open('bible.txt', 'r') as bible:
     # bible.txtを単語で分割してリストにする
     text1 = re.sub(r'[^a-zA-Z\s]', "", text)
     t = text1.split()
+    print(t)
 
     # 1.指定した英単語の出現数を出力
     word = input('探したい単語を入力：')
