@@ -1,11 +1,15 @@
-class total():
-    l = []
-    print(f'合計：{sum(l)}')
-    x = input()
-    
-    while x.isdigit():
-        l.append(int(x))
-        print(f'合計：{sum(l)}')
+class total:
+    count = 0
+
+    @classmethod
+    def goukei(cls): 
         x = input()
-    else:
-        print('終わります。')
+        while x.isdigit():
+            x = int(x)
+            cls.count = cls.count + x
+            print(f'合計：{cls.count}')
+            x = input()
+        else:
+            print('終わります。')
+
+total.goukei()
