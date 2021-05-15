@@ -1,8 +1,16 @@
 class Cow():
-    def talk(self, name, age, gender, weight):
-        print(f'{name} {age}歳 {gender} {weight}kg')
+    def __init__(self, name, age, gender, weight):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.weight = weight
 
-cow = Cow()
-cow.talk('はなこ', 3, 'メス', 100.4)
-cow.talk('たろう', 4, 'オス', 200.5)
-cow.talk('むげん', 9, 'オス', 300.6)
+    def talk(self):
+        print(f'{self.name} {self.age}歳 {self.gender} {self.weight}kg')
+
+hanako = Cow('はなこ', 3, 'メス', 100.4)
+tarou = Cow('たろう', 4, 'オス', 200.5)
+mugen = Cow('むげん', 9, 'オス', 300.6)
+hanako.talk()
+tarou.talk()
+mugen.talk()
