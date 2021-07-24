@@ -11,10 +11,10 @@ class Person:
         return self.weight
     
     def set_pet_name(self, name):
-        self.pet.changename(name)
-
+        return self.pet.changename(name)
+        
     def set_pet_weight(self, weight):
-        self.pet.changeweight(weight)
+        return self.pet.changeweight(weight)
 
 
 class Pet:
@@ -24,33 +24,25 @@ class Pet:
 
     def changename(self, name):
         self.name = name
+        return self.name
 
     def changeweight(self, weight):
         self.weight = weight
-
-    def get_name(self):
-        return self.name
-        
-    def get_weight(self):
         return self.weight
 
 
-dog = Pet('犬', 3)
-
-person = Person('たろ', 100.3, dog)
-person.set_pet_name('たろたろ')
-person.set_pet_weight(10.2)
-name = person.get_name()
-weight = person.get_weight()
-pet_name = dog.get_name()
-pet_weight = dog.get_weight()
+tarotaro = Pet('犬', 1)
+taro = Person('たろ', 100.3, tarotaro)
+name = taro.get_name()
+weight = taro.get_weight()
+pet_name = taro.set_pet_name('たろたろ')
+pet_weight = taro.set_pet_weight(10.2)
 print(f'飼い主：{name}　{weight}kg　ペット：{pet_name}　{pet_weight}kg')
 
-person = Person('じろ', 70.5, dog)
-person.set_pet_name('じろじろ')
-person.set_pet_weight(30.2)
-name = person.get_name()
-weight = person.get_weight()
-pet_name = dog.get_name()
-pet_weight = dog.get_weight()
+jirojiro = Pet('犬', 1)
+jiro = Person('じろ', 70.5, jirojiro)
+name = jiro.get_name()
+weight = jiro.get_weight()
+pet_name = jiro.set_pet_name('じろじろ')
+pet_weight = jiro.set_pet_weight(30.2)
 print(f'飼い主：{name}　{weight}kg　ペット：{pet_name}　{pet_weight}kg')
